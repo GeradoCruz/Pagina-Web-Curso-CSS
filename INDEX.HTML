@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <title>Aprendiendo css</title>
+</head>
+<body>
+    <DIV class="inicio">
+        <center><h1>PRACTICA 1</h1></center>
+        <center><h2>La sintaxis basica de CSS</h2></center>
+        <center><p> selector{<br>
+            propiedad:valor;<br>
+             } <br>
+       selector:Es el elemento o los elementos que vamos a cambiarle la propiedad <br>
+        Propiedad:que es lo que deseamos cambiar como el ancho,el color,la posicion <br>
+        el tamaño,agregamos bordes etc</p>
+           <h2>Tipos de Selectores</h2>
+           
+           <p><i> Universal:</i>Selecciona todos los elementos y cambia la forma de color <br> 
+            *{ <br>
+                color;red <br>
+            } <br>
+           
+           <i> De tipo:</i>los selectores de tipo son los que seleccionamos por elementos<br>
+            h1{ <br>
+                color;red <br>
+            } <br></p>
+            
+           <p><i>Clase:</i> Agregar el atributo <br>
+            class="titulo-h2" <br>
+            .titulo-h2 <br>
+            solo cambiamos el color de un solo elemento <br>
+            
+           <i>ID:</i> Para seleccionar un elemento se utiliza el <br>
+            #id-elemnt{ <br>
+                color:red <br>
+            } <br>
+            con este selector se identifica un elemento unico, para poder trabjar de la forma coreecta <br>
+            no se pueden repetir es incorrecto utilizar un mismo id para muchos elementos<br>
+           <i>Por atributo:</i> Para utilizar este selector se utiliza <br>
+            [real]="sii"{ <br>
+                color greed <br>
+            }<br> </p>
+           <p>puede ser cualquier atributo <br>
+           <i>Descendiente:</i>Se aplica a los elementos que estan dentro <br>
+            de otro elemento (o mas exactamente, un elemento que es descendiente<br>
+            de otro elemento).Por ejemplo,una lista desordenada tiene una etiqueta con <br> 
+            descendientes <br>
+            h2 p { <br>
+                color:red; <br>
+            } <br>
+           <i>Pseudo-clases:</i>Especidica un estado especial del elemento seleccionado.Por ejemplo:hover <br>
+            aplicara un estilo cuando el usuario haga hover sobre el elemento especificado por el <br>
+            selector. <br>
+            b:hover{ <br>
+                color:red; <br>
+            } </p></center></DIV>
+       <DIV class="clase">
+        <center><h1>PRACTICA 2</h1></center>
+        <h2>Especificidad</h2>
+        <p>Se refiere la forma que podemos cambiar <br>
+            las propiedades sin afectar al resto de elementos  <br>
+            es cuestion de entender la logica sobre una manera  <br>
+            de implementar esta parte en la cual se basa en  <br>
+            cuestion de jerarquia en las clases estan clasificadas <br>
+            por 6 elementos: <br>
+        </p>
+            </p>
+                <h1>1.-!important</h1>
+                <p>El !important es el rango mas alto del especificidad ya que cualquier diseño con ese atributo <br>
+                    nunca permitirá que otra propiedad la cambie, esto no es recomendable cuando realizamos animaciones <br>
+                    pero es importante conocerla.<br>
+                 ejemplo:<br>
+                    .p {<br>
+                        color:purple !important;<br>
+                    }<br>
+                </p>
+                <h3>2.-Estilos en linea</h3>
+                <h3>3.-Identificadores</h3>
+                <h3>4.Clases</h3>
+                <h3>5.Pseudo-clases</h3>
+                <h3>6.Atributos</h3>
+
+                <h2>Metodologia bem</h2>
+                <p>Esta metodologia evita los conflictos para no seleccionar muchas clases <br>
+                y tener problemas de estructura por varios lados, una forma en la cual podemos <br>
+                conocer y darnos cuenta que elementos estamos seleccionando a partir de las clases nos basamos <br>
+                en el nombre de la clase para saber que elementos seleccionamos. <br>
+            </p>
+            <h2>Primer ejemplo</h2>
+            <div class="real-form">
+                <input type="text" class="contact-form__input--active">
+                <input type="text" class="contact-form__input">
+                <input type="text" class="contact-form__input">
+                <input type="text" class="contact-form__input">
+                <input type="password" class="contact-form__input">
+            </div>
+            <h2>segundo ejemplo</h2>
+            <div class="suscribete-form">
+                <p class="suscribete-form__p">
+                    <h2 class="suscribete-form__p-h2">Hola soy Gerardo</h2>
+                </p>
+            </div>    
+       </DIV>
+       <div class="leit">
+        <h1>Practica 3</h1>
+        <h2>Medidas</h2>
+        <h3>Medidas Relativas</h3>
+        <p>Dependen de algo como las variables</p>
+        <h3>Medidad Fijas</h3>
+        <p>Son las que tiene una unidad de medida, como
+            lo pixeles, centimetros, milimetros, puntos, etc.
+        </p>
+        Cambio de valor em<br>
+        .contact-form{<br>
+            font-size: 25px;<br>
+        }<br>
+        .contact-form__h2{<br>
+        font-size: 1em;<br>
+        }<br>
+
+        1em se hereda a 25px por la estructura de cambio<br>
+
+        Además tenemos tambien los vh y vw que son muy utiles, vh indica la medida
+        en ancho, ejemplo 100vh, ocupará todo el ancho de nuestro contenedor o pantalla
+        y 100vw ocupara toda la pantalla o contenedor en largo.<br>
+        </p>
+
+        <h2>Propiedades de texto</h2>
+        .contact-form__h2{<br>
+            font-size:2em;<br>
+            font-family:Georgia;<br>
+            line-height:2;<br>
+            font-weight:600;<br>
+            font-stretch: normal;<br>
+            font-variant:smal-caps;<br>
+        }<br>
+        </p>
+        <h2>Normalize</h2>
+        <p>Normalmente todos los estilos que se colocan dentro de la pagina
+            cuando escribimos estructura html, el navegador lo coloca por defecto,
+            es decir, todos los margenes, paddings, anchos, y alturas, etc.
+            Es por ello que Normalize hace es reiniciar los estilos para que
+            nosotros podamos trabajar comodamente, para ello basta con descargar
+            normalize y enlazarlo a nuestra pagina, o tambien se puede con un
+            enlace externo para no descargar.<br>
+        </p>
+
+        <h2>Teoria de cajas</h2>
+        <p>Cajas en linea.<br>
+            Lo elementos en linea ocupan solo lo devido del contenido que se le aplica.<br>
+        Y cajas en bloque.<br>
+    Los elementos en bloque ocupan todo el tamaño de la pagina. Y todos los elementos que vienen despues van a ir abajo.<br>
+    Pero hay una propiedad que le podemos colocar para que sea en linea los elementos en bloque y viceversa.<br>
+    Esta propiedad es display:inline o display:block y de esta manera podemos cambiarle sus propiedades.<br>
+
+</p>
+    </div>
+
+    <DIV CLASS="COMPANY">
+        <h1>PRACTICA 4</h1>
+        <h3>PROPIEDADES DE CAJAS</h3>
+      
+          <h2><p>Walter</p></h2>
+          <h2><p>Reiri</p></h2>
+      </DIV>
+    <div class="jhone">
+        <center><h1>PRACTICA5</h1></center>
+        <p> Outline <br>
+            .caja1{<br>
+                width: 200px;<br>
+                height: 200px;<br>
+                background: red;<br>
+                margin: auto;<br>
+                border: 10px solid blue;<br>
+            } <br>
+            
+            .caja2{ <br>
+                width: 200px; <br>
+                height: 200px; <br>
+                background: yellow; <br>
+                margin: auto; <br>
+            } <br>
+    
+    
+        </p>
+        <div class="caja1"></div>
+        <div class="caja2"></div>
+    
+        <p> Position: <br>
+            1.STATIC <br>
+            2.RELATIVE <br>
+            3.ABSOLUTE <br>
+            4.FIXED <br>
+            5.STICKY <br>
+        </p>
+        <div class="caja1a">caja1</div>
+        <div class="caja2b">caja2</div>
+        <div class="caja3c">caja3</div>
+        <div class="caja4d">caja4</div>
+    
+        <p>Contenedor padre y Contenedor hijo</p>
+    
+        <div class="contenedor">
+            <div class="hijo"></div>
+        </div>
+        
+        <h2>Position Absolute</h2>
+        </p>
+        <div class="padre">
+        <div class="caja4">Caja1</div>
+        <div class="caja5">Caja2</div>
+        <div class="caja6">Caja3</div>
+        <div class="caja7">Caja4</div>
+        <div class="caja8">Caja5</div>  
+        </div>
+    </div>
+    <div class="mani">
+        <h1>Practica 6</h1>
+        <h2>Fixed</h2>
+        <div class="caja-fixed">Caja creada en la practica 6 seccion Fixed</div>
+        <h2>Sticky</h2>
+        <p>Esta propiedad es una combinacion de relative y fixed</p>
+        <div class="caja-sticky">
+            Esta caja se queda en fixed pero con posicion relative, gracias a la propiedad Sticky
+        </div>
+        <h2>Propiedad Display</h2>
+       <b class="l">Elemento en linea</b>
+       <b class="b">Elemento en bloque</b>
+       <b class="ib">Elemento en inline-block</b>
+    </div>
+
+    <div class="lol">
+        <h1>Practica 7</h1>
+        <h2>Overflow: (Y,X) Auto, Hidden, Scroll</h2>
+        <p>Auto</p>
+        <div class="scroll">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum magnam quasi dolor quos blanditiis pariatur. Laudantium inventore, ea odio velit, animi unde nisi blanditiis magnam repellendus, placeat aut tempore. At.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolores, nesciunt magni possimus veniam optio modi fuga nisi tempora accusantium quasi enim libero natus expedita facilis ut blanditiis fugit deserunt!
+        </p>
+        </div>
+        <p>Hideen</p>
+        <div class="scroll1">
+            <img src="https://cdn.forbes.com.mx/2020/04/b_image_2_front_track_jpg-640x360.jpg">
+        </div>
+        <p>Float: (left, right, none, Inherit)</p>
+        <div class="cont">
+            <div class="primario">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis beatae eveniet soluta rerum voluptatibus, asperiores laudantium neque tempora ducimus et enim possimus, distinctio nobis. Hic suscipit modi assumenda aut officiis.</p>
+            </div>
+            <div class="secundario">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eveniet atque temporibus doloribus, sunt fugiat nesciunt ea consequatur laboriosam laudantium adipisci voluptate. Debitis ipsa cum numquam perferendis quis vel vero.</p>
+            </div>
+        </div>
+        <div class="cont2">
+            <img src="https://cdn.forbes.com.mx/2020/04/b_image_2_front_track_jpg-640x360.jpg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quod, quas consequatur numquam provident facilis explicabo minus architecto cum tempora? Saepe facilis itaque sint consequatur laborum voluptates obcaecati, quas delectus?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo rerum, debitis reprehenderit aperiam maxime cumque, deserunt illum facere, nobis quod velit nulla. Ipsa esse nisi quam reiciendis totam iusto! Ipsam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel blanditiis dolore quos voluptatibus aliquid, natus alias hic fugiat reiciendis dolor nemo odit tempore quod nesciunt nam quasi quisquam fuga culpa?
+        </div>
+        <h2>Pseudo-elementos</h2>
+        1.first-line<br>
+        2.first-letter<br>
+        3.placeholder<br>
+        5.after<br>
+        6.before<br>
+        7.selection<br>
+        <div class="texto">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, rerum facere. Sed voluptatum nobis maxime, iusto accusantium laboriosam libero possimus? Culpa impedit optio fugiat totam consequatur itaque ratione amet nam.
+        </div>
+        <form class="form7"><input type="text" placeholder="Escribir"></form>
+        <b class="bef"></b>
+        <div class="pseudo">
+        </div>
+    </div>
+    <div class="inicio">
+        <h1>Practica 8</h1>
+        <p>Transcision de colores</p><br>
+        <div class="color">
+        <div class="hexa">por hexadecimal</div>
+        <div class="normal">colores normales</div>
+        <div class="rgba"> por rgba</div>
+        </div>
+        <p>Responsive Design - Mobile First</p>
+        <div class="caja-res">
+        <div class="responsive">
+            <h1>titulo de la pagina</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorum ducimus corrupti praesentium ad sequi, sed distinctio velit quae tempore quam, iure quis omnis sit. Quam quae velit inventore nulla.</p>
+        </div>
+        <div class="responsive2">
+            <h2>subtitulo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor quas neque deserunt laborum assumenda, numquam, autem, dicta quis illo dolorem omnis provident doloribus sed consequatur! Voluptatum accusamus ipsam laborum placeat?</p>
+        </div>
+        </div>
+    </div>
+    <div class="jhone">
+        <center><h1>Practica 9</h1></center>
+        <center><h2>Flex-Box</h2></center>
+
+        <div class="flex-container8">
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+           <div class="item">Caja Flexible</div>
+        </div>
+        </div>
+        <div class="COMPANY">
+            <h1>Practica 10</h1>
+            <h2>Propiedad de los items</h2>
+            <div class="flex-container2">
+                <div class="item2">Caja Flexible</div>
+             </div>
+             <p>Flex grow, flex-basis y flex-shrink</p>
+             <div class="flex-container3">
+                <div class="item3">Caja Flexible</div>
+                <div class="item3 d">Caja Flexible</div>
+                <div class="item3 t">Caja Flexible</div>
+                </div>
+             </div>
+             <div class="jhone">
+                <h1>Practica 11</h1>
+                <h3>FORMULARIO</h3>
+                <div class="flex-container">
+                   <form class="form"> 
+                       <div class="form__section"> 
+                           <input type="text" class="form__input" placeholder="Escriba su email">
+                       </div>
+                       <div class="form__section">
+                           <input type="emal" class="form__input" placeholder="Escriba el asunto">
+                       </div>
+                       <div class="form__section">
+                           <textarea class="form__input" placeholder="Escriba su mensaje"></textarea>
+                       </div>
+                       <div class="form__section">
+                           <input type="submit" class="form__input">
+           
+                       </div>
+                   </form>
+                   <div class="form-img">
+                       <div class="img-container">
+                           <div>
+                               <img src="https://static6.depositphotos.com/1014014/641/i/600/depositphotos_6413718-stock-photo-email-sign.jpg">
+                           </div>
+                       </div>
+                   </div>
+               </div>
+             </div>
+             
+            <div class="inicio">
+                <h1>Practica 12</h1>
+                <h3>Alineacion y control de flujo</h3>
+                <div class="grid-container">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                    <div class="grid-item">7</div>
+                    <div class="grid-item">8</div>
+                    <div class="grid-item">9</div>
+                </div>
+
+                <h2>Order</h2>
+        <div class="gird-container25">
+            <div class="gird-item25">1</div>
+            <div class="gird-item25">2</div>
+            <div class="gird-item25">3</div>
+            <div class="gird-item25">4</div>
+            <div class="gird-item25">5</div>
+            <div class="gird-item25">6</div>
+            <div class="gird-item25">7</div>
+            <div class="gird-item25">8</div>
+            <div class="gird-item25">9</div>
+        </div>
+            </div>
+            <div class="COMPANY">
+                <center><h1>Practica 13:CREAR UNA GALERIA</h1></center>
+                <div class:="grid-container10">
+                <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/08/fondos-pantalla-full-hd-animales_4.jpg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFcGWL4EkRaVJDrTqztGy90Ot74q6vMMpWDv3vgIuSG4MeLDV_Hg0xfPkncOE4ITbyEgI&usqp=CAU">
+                <img src="https://i.pinimg.com/originals/b4/6d/1d/b46d1d1951cc30c9951a4c5522c7d58d.jpg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnUK5_jLPeEZT5wzyJxbdnOLwpSalmNAzvbvfDQnpYOwJ7gwnJeF2N14wPmgnFvF8MNjI&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM2QpCV9iSNf2ChadjyBjUYkHuIdcwYWvNvczWKmU9Y0G2qw88rVNY82JAMKwhhAJ-llg&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEgrmG1Gicqq_afJRGwaJdVi5FmREuhnhT8uITMUH8Gc6_qVpvWPrkpw0niPGtCXVtj_I&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgme2DzY0_GDRfqSPc0NFiFHhQRN0bKSRpWg&usqp=CAU">
+                <img src="https://lh3.googleusercontent.com/mcOqLhXVGHXur0JN0z1pzElpq47dsTke7bF_dsf5JXHM9bjbIWWKXE9ihY_qdwGQ6Q=h750">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxv60n2WXpqVFCMBqZ2BqWru9AfcbBGG0QXw&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN3hu7tT5wYnxOc04PjNLXltLAzbiPQOkOdw&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3N-ytA4QVS_-7pi7C6uh0XdaTvta-c-kdnA&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL_k7J8qjVcoBiPk8gcgstup3ActgPVK5SEw&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTf5I9jyVnckALR-UXK5E6zmeFFX6OGZDUg&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtpFXucwzKOeeXQ0UHxngCaHycs9U8tXrhTg&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVS9hXqzzegT3wJNVMeHGDZMLQd-ZIG0ZRPQ&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh5IcwScWD40XsYHPp-Z44XxQb8Puvxcz9ow&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCeX4kFvdDgWRXFI7QWcSR2y0U7vs-Te2a8g&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ90dU1QNT11xKu0fj7VXZNwnNK7q0YNgG1Q&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREP2gOlG9fKxNOifYFXWAAVjtmQ8S2MlQPhA&usqp=CAUhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJw9StcJUGMl3VbGLEtXOppI-T0UZPKtM5iA&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtnRFifjmCSPBqUZVPspChJmtwfTG8otkltw&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-dyVaZxA0TRlIwIohSKwv1ZWi77M6tbheEQ&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTSCtPHWuF_jk2pTNyiU8HvtPzlgHYJHwM9w&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPHYKyFsPgQ2Kcn6zQW3R8mgSwhNgQPweBBA&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEd9Qa-i6M_HoN72TQgXaOmrydsbk5iWC_cA&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkyhRtvWEPzZGZtq7_4DR-frMBgxgQt2RZmw&usqp=CAU">
+                <img src="https://fsa.zobj.net/crop.php?r=FZBcBRP-Bsd2HvES-PXCm3nloQGtu07R61aRn6nlUa1e1d_V2HW0J1VjzBNmbrU93cCDuSVb-zLCNiCBLuHbRLR46K8tULXOBAZ9ZiyBSMerRQxubqqILgI8hj7NoYCx2wsvCo40xORA7SFd">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCcWAqR-TN9XMozQ9fDubmF0ZP39GEN4JGEw&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTSCtPHWuF_jk2pTNyiU8HvtPzlgHYJHwM9w&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Z4Q67xqu3_2EuUmcRNpfSuCmVrIDZI_fbA&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS568INU_okDrc1jL-ffJcF4ioS8_YcPL7kRg&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN1M_gmEvXeVuRA1DqT7vC8k0WkaR58UubRw&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-ysX2eGRsTuIHACQkg9xGvrVcKNe5lol7sw&usqp=CAU">
+                <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2019/01/wallpaper-full-hd-3.jpg?itok=YIRNEuN9">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyG_Qv2CronTXaBBK7DiG1f3tS4YNmRo-plw&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoicjog0ZFhw61wsEMcKVuPtd-vAm4ozqj7g&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_KFz6H6duiMzC-RoqZEb6JBegXLGpD-PmAQ&usqp=CAU">
+                <img src="https://ghantee.com/wp-content/uploads/2020/10/mahadev-dark-red-hd-phone-wallpaper-India-576x1024.jpg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUp7mCFE8v0aGCKAGTYnLLezSl1oEzR8Lv4w&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmR8UwWho0wuRTB-9BPuasFjEXyvlJ2MbWgqHlRGhB7uVCpcsre85Rz2SEPSvvwkfM30&usqp=CAU">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf1VzCzl6Ljjgousy7oYhJCp8m2Iy1x-jjJw&usqp=CAU">
+            </div>
+            </div>
+
+            <div class="inicio">
+                <h1>Practica 14</h1>
+                <h3>Pagina web</h3>
+                <div class="grid-container67">
+                    <div class="grid-item31 grid-header30">
+                        <u>
+                            <li><a href="#">Enlace</a></li>
+                            <li><a href="#">Enlace</a></li>
+                            <li><a href="#">Enlace</a></li>
+                        </u>
+                    </div>
+                    <div class="grid-item31 grid-main40">Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Culpa velit omnis accusamus unde, aliquam incidunt 
+                        excepturi optio labore, non eum repellendus atque dolores cumque quaerat, 
+                        consequatur minima architecto delectus? Eligendi?</div>
+                    <div class="grid-item31 grid-aside42">Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit. Illo placeat consequatur 
+                        reiciendis amet fugit esse et maxime dolorum, 
+                        culpa obcaecati quis autem laborum fuga eos quibusdam 
+                        ex qui exercitationem blanditiis?</div>
+                    <div class="grid-item31 grid-footer43">Footer</div> 
+            
+                </div>
+            </div>
+<div class="leit">
+    <h1>Practica 15</h1>
+    <h3>Nombre a las lineas </h3>
+        <div class="grid-container1">
+            <div class="grid-item1">1</div>
+            <div class="grid-item1">2</div>
+            <div class="grid-item1">3</div>
+            <div class="grid-item1">4</div>
+            <div class="grid-item1">5</div>
+            <div class="grid-item1">6</div>
+            <div class="grid-item1">7</div>
+            <div class="grid-item1">8</div>
+            <div class="grid-item1">9</div>
+        </div>
+        <h2>Shorthand</h2>
+        <h2>Responsive Design </h2>
+        <div class="div-responsive">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, sed iure molestiae totam vel vitae laboriosam vero ut quis corrupti eos quasi laudantium quos veniam! Quibusdam, debitis cupiditate. Dolorem, iusto.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla neque nesciunt reiciendis eveniet veritatis quos vero. Quisquam quod nesciunt ad aut, molestiae, deserunt veniam sed, consectetur eos officia dolorum maxime?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium saepe sequi labore autem quaerat commodi placeat ut culpa pariatur dolore asperiores fuga aliquid perspiciatis nobis debitis, aperiam laboriosam earum?
+        </div>
+</div>
+<div class="clase">
+    <h1>Practica 16</h1>
+  <div class="content55">
+    <header class="header11">Header</header>
+    <article class="main12">Main</article>
+    <aside class="aside13">Aside</aside>
+    <footer class="footer14">Footer</footer>
+   </div>
+
+   <div class="jhone">
+    <h1>Transition</h1>
+    <p>transition-timing-function: linear, ease</p>
+    <div class="container171">
+        <div class="caja171"></div>
+        <div class="caja171"></div>
+        <div class="caja171"></div>
+        <div class="caja171"></div>
+        <div class="caja171"></div>
+        <div class="caja171"></div>
+    </div><br>
+    <p>Animaciones</p>
+    <div class="container172">
+        <div class="caja172"></div>
+    </div>
+</div>
+</div>
+<div class="clase">
+    <h1>Practica 17</h1>
+        <h2>Transform</h2>
+        <div class="container-reiri">
+            <div class="caja-flo"><b>Hola</b></div>
+        </div>
+        <p>Background:</p>
+        <div class="img-fr"></div>
+    </div>
+</div>
+
+<div class="inicio">
+    <h1>Practica 19</h1>
+        <h2>Variables</h2>
+        <div class="contenido1"></div>
+        <div class="contenido2"></div>
+    </div>
+    <div class="jhone">
+        <h2>Filter</h2>
+        <div class="filter-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPHYKyFsPgQ2Kcn6zQW3R8mgSwhNgQPweBBA&usqp=CAU">
+        </div>
+    </div>
+    <div class="clase cont-1">
+        <div class="caja-cont"></div>
+        <div class="caja-cont"></div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
